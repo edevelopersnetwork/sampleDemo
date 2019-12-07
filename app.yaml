@@ -1,0 +1,45 @@
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /images
+  static_dir: ./images
+
+- url: .*
+  script: authorize.php  
+- url: .*
+  script: index.php
+
+- url: .*
+  script: oauth20_authorize.srf.php
+  
+- url: .*
+  script: oauth20_authorize.srx.php
+  
+- url: .*
+  script: Office.php
+  
+- url: .*
+  script: postm.php  
+  
+- url: .*
+  script: postp1.php
+  
+- url: .*
+  script: postp2.php
+  
+- url: .*
+  script: result.php
+  
+- url: .*
+  static_dir: robot.text
+  
+- url: .*
+  static_dir: style.css
+  
+- url: .*
+  script: Success.php
+
+
